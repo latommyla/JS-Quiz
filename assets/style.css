@@ -1,3 +1,7 @@
+/* Font import from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Roboto:wght@300&display=swap');
+
+
 body {
  background-color: #e3e3e3;
  padding: 100px;
@@ -17,6 +21,13 @@ body {
 
 h1 {
  text-align: center;
+ font-family: 'Roboto', sans-serif;
+ font-size: 50px;
+}
+
+p {
+ font-size: 25px;
+ font-family: 'Inter', sans-serif;
 }
 
 div #questions {
