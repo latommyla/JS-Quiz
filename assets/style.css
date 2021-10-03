@@ -48,4 +48,5 @@ div button {
  font-family: 'Inter', sans-serif;
  font-size: 20px;
  font-weight: bolder;
+ box-shadow: 0px 0px 5px grey;
 }
