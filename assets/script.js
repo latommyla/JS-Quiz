@@ -44,7 +44,7 @@ var createUl = document.createElement("ul");
 startQuiz.addEventListener("click", function() {
  if (holdTimer === 0) {
   holdTimer = setInterval(function () {
-   secondsLeft--;
+   countDown--;
    timer.textContent = "Time: " + countDown;
 
    if (countDown <=0) {
@@ -155,7 +155,7 @@ createSubmit.addEventListener("click", function() {
  } else {
   var score = {
    initials: initials,
-   score = timeLeft
+   score: timeLeft,
   }
   console.log(score);
   var scoreRecap = localStorage.getItem("scoreRecap");
