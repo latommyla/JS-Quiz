@@ -126,3 +126,48 @@ function allDone() {
    questionsDiv.appendChild(createP2);
  }
 } 
+
+var createLabel = document.createElement("label");
+createLabel.setAttribute("type", "text");
+createLabel.textContent = "Enter your name ";
+
+questionsDiv.appendChild(createLabel);
+
+var createInput = document.createElement("input");
+createInput.setAttribute("type", "text");
+createInput.setAttribute("id", "initials");
+createInput.textContent = "Submit";
+
+questionsDiv.appendChild(createInput);
+
+var createSubmit = document.createElement("button");
+createSubmit.setAttribute("type", "submit");
+createSubmit.setAttribute("id", "submit");
+createSubmit.textContent = "Submit";
+
+questionsDiv.appendChild(createSubmit);
+
+createSubmit.addEventListener("click", function() {
+ var initials = createInput.value;
+
+ if (initials === null) {
+  console.log("No value");
+ } else {
+  var score = {
+   initials: initials,
+   score = timeLeft
+  }
+  console.log(score);
+  var scoreRecap = localStorage.getItem("scoreRecap");
+  if (scoreRecap === null) {
+   scoreRecap = [];
+  } else {
+   scoreRecap = JSON.parse(scoreRecap);
+  }
+  scoreRecap.push(score);
+  var newScore = JSON.stringify(scoreRecap);
+  localStorage.setItem("scoreRecap", newScore);
+  window.location.replace("./quiz.html");
+ }
+});
+
