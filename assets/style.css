@@ -4,12 +4,13 @@
 
 body {
  background-color: #e3e3e3;
- padding: 100px;
+ padding-top: 100px;
+ margin: 0 auto;
 }
 
 #wrapper {
  background-color: white;
- width: 750px;
+ width: 650px;
  height: 350px;
  display: block;
  margin: 0 auto;
@@ -49,4 +50,32 @@ div button {
  font-size: 20px;
  font-weight: bolder;
  box-shadow: 0px 0px 5px grey;
+}
+
+@media screen and (max-width: 900px) {
+ #wrapper {
+  width: 540px;
+  height: 320px;
+  padding: 40px;
+ }
+ h1 {
+  font-size: 40px;
+ }
+ p {
+  font-size: 22px;
+ }
+}
+
+@media screen and (max-width: 700px) {
+ #wrapper {
+  width: 400px;
+  height: 300px;
+  padding: 30px;
+ }
+ h1 {
+  font-size: 35px;
+ }
+ p {
+  font-size: 19px;
+ }
 }
