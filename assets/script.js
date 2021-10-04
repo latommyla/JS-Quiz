@@ -101,3 +101,28 @@ function compare(event) {
  }
  questionsDiv.appendChild(createDiv);
 }
+
+function allDone() {
+ questionsDiv.innerHTML = "";
+ timer.innerHTML = "";
+
+ var createH1 = document.createElement("h1");
+ createH1.setAttribute("id", "createH1");
+ createH1.textContent = "Done!";
+
+ questionsDiv.appendChild(createH1);
+
+ var createP = document.createElement("p");
+ createP.setAttribute("id", "createP");
+ 
+ questionsDiv.appendChild(createP);
+
+ if (countDown >= 0) {
+   var timeLeft = countDown;
+   var createP2 = document.createElement("p");
+   clearInterval(holdTimer);
+   createP.textContent = "Your score is " + timeLeft;
+
+   questionsDiv.appendChild(createP2);
+ }
+} 
