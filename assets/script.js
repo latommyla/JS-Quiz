@@ -7,7 +7,7 @@ var allQuestions = [
  },
  {
     question: "How do you write 'Hello World' in an alert box?",
-    answer: ["alert('Hello World');", "alertBox('Hello World');", "msgBox('Hello World');", "msg('Hello World');"],
+    answer: ["alert('Hello World')", "alertBox('Hello World')", "msgBox('Hello World')", "msg('Hello World')"],
     correctAnswer: "alert('Hello World')"
  },
  {
@@ -18,7 +18,7 @@ var allQuestions = [
  {
     question: "How to write an IF statement in JavaScript?",
     answer: ["if i = 5 then", "if(i == 5)", "if i == 5 then", "if i = 5"],
-    corretAnswer: "if(i == 5)"
+    correctAnswer: "if(i == 5)"
  },
  {
     question: "What is the correct way to write a Javascript array?",
@@ -76,38 +76,37 @@ function render(questionList) {
 }
 
 function compare(event) {
- var element = event.target;
+  var element = event.target;
 
- if (element.matches("li")) {
+  if (element.matches("li")) {
 
     var createDiv = document.createElement("div");
     createDiv.setAttribute("id", "createDiv");
   
-    if (element.textContent == allQuestions[questionList].answer) {
-    score++;
-    createDiv.textContent = "Nice Job! The answer is: " + allQuestions[questionList].answer;
+    if (element.textContent == allQuestions[questionList].correctAnswer) {
+      score++;
+      createDiv.textContent = "Nice Job! The answer is: " + allQuestions[questionList].correctAnswer;
 
     } else {
-    countDown = countDown - penalty;
-    createDiv.textContent = "Wrong! The correct answer is " + allQuestions[questionList].answer;
+      countDown = countDown - penalty;
+      createDiv.textContent = "Wrong! The correct answer is " + allQuestions[questionList].correctAnswer;
     }
  }
 
  questionList++;
 
- if (questionList >= allQuestions.length) {
-    allDone();
-    createDiv.textContent = "Quiz is over!" + " " + "You got " + score + "/" + allQuestions.length + " correct!";
+  if (questionList >= allQuestions.length) {
+      allDone();
+      createDiv.textContent = "Quiz is over!" + " " + "You got " + score + "/" + allQuestions.length + " correct!";
   } else {
-    render(questionList);
- }
+      render(questionList);
+  }
  questionsDiv.appendChild(createDiv);
 
 }
 
 function allDone() {
   questionsDiv.innerHTML = "";
-  timer.innerHTML = "";
 
   var createH1 = document.createElement("h1");
   createH1.setAttribute("id", "createH1");
@@ -121,13 +120,13 @@ function allDone() {
   questionsDiv.appendChild(createP);
 
  if (countDown >= 0) {
-   var timeLeft = countDown;
-   var createP2 = document.createElement("p");
-   clearInterval(holdTimer);
-   createP.textContent = "Your score is " + timeLeft;
+    var timeLeft = countDown;
+    var createP2 = document.createElement("p");
+    clearInterval(holdTimer);
+    createP.textContent = "Your score is " + timeLeft;
 
-   questionsDiv.appendChild(createP2);
- }
+    questionsDiv.appendChild(createP2);
+  }
 
 
   var createLabel = document.createElement("label");
