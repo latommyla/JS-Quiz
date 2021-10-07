@@ -27,15 +27,14 @@ var allQuestions = [
  },
 ];
 
-var score = 0;
-var questionList = 0;
-
 // Variables for ID elements
 var wrapper = document.querySelector("#wrapper");
 var startTimer = document.querySelector("#timer");
 var questionsDiv = document.querySelector("#questions");
 var startQuiz = document.querySelector("#startquiz");
 
+var score = 0;
+var questionList = 0;
 var countDown = 60;
 var holdTimer = 0;
 var penalty = 10;
@@ -44,9 +43,9 @@ var createUl = document.createElement("ul");
 // Quiz timer begins when Start Quiz! button is clicked
 startQuiz.addEventListener("click", function() {
  if (holdTimer === 0) {
-      holdTimer = setInterval(function () {
-      countDown--;
-      startTimer.textContent = "Time: " + countDown;
+        holdTimer = setInterval(function () {
+        countDown--;
+        startTimer.textContent = "Time: " + countDown;
 
       if (countDown <=0) {
         clearInterval(holdTimer);
