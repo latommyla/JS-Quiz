@@ -7,16 +7,12 @@ body {
  margin: 0 auto;
 }
 
-#highscores {
+#timer {
+ height: 40px;
  display: block;
  text-align: center;
- padding-bottom: 20px;
  font-family: 'Roboto';
  font-size: 20px;
-}
-
-#timer {
- text-align: center;
 }
 
 #wrapper {
@@ -59,6 +55,11 @@ button:hover {
  background-color: turquoise;
 }
 
+ul {
+ margin: 0 auto;
+ padding: 0;
+}
+
 li {
  align-items: center;
  margin: 0 auto;
@@ -82,6 +83,19 @@ div button {
  box-shadow: 0px 0px 5px grey;
 }
 
+#highscores {
+ display: block;
+ text-align: center;
+ padding: 20px;
+ font-family: 'Roboto';
+ font-size: 20px;
+ font-weight: bolder;
+}
+
+a:link,
+a:visited {
+ text-decoration: none;
+}
 
 @media screen and (max-width: 900px) {
  #wrapper {
