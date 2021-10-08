@@ -1,4 +1,4 @@
-// Questions variable with objects
+// Questions variable with objects.
 var allQuestions = [
  {
     question: "Inside which HTML element do we put the JavaScript?",
@@ -33,6 +33,7 @@ var startTimer = document.querySelector("#timer");
 var questionsDiv = document.querySelector("#questions");
 var startQuiz = document.querySelector("#startquiz");
 
+// Variables for all functions.
 var score = 0;
 var questionList = 0;
 var countDown = 60;
@@ -40,23 +41,27 @@ var holdTimer = 0;
 var penalty = 10;
 var createUl = document.createElement("ul");
 
-// Quiz timer begins when Start Quiz! button is clicked
+// Quiz timer begins when Start Quiz! button is clicked.
 startQuiz.addEventListener("click", function() {
+  // Timer countdown begins.
  if (holdTimer === 0) {
         holdTimer = setInterval(function () {
         countDown--;
         startTimer.textContent = "Timer: " + countDown;
 
+        // When timer runs out, message appears "Ran out of time!".
       if (countDown <=0) {
         clearInterval(holdTimer);
         allDone();
         startTimer.textContent = "Ran out of time!";
       }
+      // Interval before timer appears.
     }, 1000);
   }
  render(questionList); 
 });
 
+// Function renders questionList with object question and answers.
 function render(questionList) {
  questionsDiv.innerHTML = " ";
  createUl.innerHTML = " ";
@@ -74,6 +79,7 @@ function render(questionList) {
  })
 }
 
+// Function compare event for correct or wrong answer selected, depending on which selected, text will appear with correct answer.
 function compare(event) {
   var element = event.target;
 
@@ -82,10 +88,12 @@ function compare(event) {
     var createDiv = document.createElement("div");
     createDiv.setAttribute("id", "createDiv");
   
+    // If correct answer is seleceted message "Nice Job! The answer is: " appears.
     if (element.textContent == allQuestions[questionList].correctAnswer) {
       score++;
       createDiv.textContent = "Nice Job! The answer is: " + allQuestions[questionList].correctAnswer;
 
+    // If wrong answer is selected message "Wrong! The correct answer is " appears.
     } else {
       countDown = countDown - penalty;
       createDiv.textContent = "Wrong! The correct answer is " + allQuestions[questionList].correctAnswer;
@@ -94,8 +102,10 @@ function compare(event) {
 
  questionList++;
 
+      // When quiz is finished, message and score will appear! 
   if (questionList >= allQuestions.length) {
       allDone();
+      // Score of how many wrong and correct with score variable.
       createDiv.textContent = "Quiz is over!" + " " + "You got " + score + "/" + allQuestions.length + " correct!";
   } else {
       render(questionList);
@@ -106,7 +116,7 @@ function compare(event) {
 
 function allDone() {
   questionsDiv.innerHTML = "";
-
+  // Function to create H1 element with "Done!" when quiz is finished.
   var createH1 = document.createElement("h1");
   createH1.setAttribute("id", "createH1");
   createH1.textContent = "Done!";
@@ -117,7 +127,7 @@ function allDone() {
   createP.setAttribute("id", "createP");
  
   questionsDiv.appendChild(createP);
-
+  // Function to create P element with final score and the remaining time.
  if (countDown >= 0) {
     var timeLeft = countDown;
     var createP2 = document.createElement("p");
@@ -127,7 +137,7 @@ function allDone() {
     questionsDiv.appendChild(createP2);
   }
 
-
+  // Label element created to input users name
   var createLabel = document.createElement("label");
   createLabel.setAttribute("type", "text");
   createLabel.textContent = "Enter your name ";
@@ -141,6 +151,7 @@ function allDone() {
 
   questionsDiv.appendChild(createInput);
 
+  // Button element created for submit button
   var createSubmit = document.createElement("button");
   createSubmit.setAttribute("type", "submit");
   createSubmit.setAttribute("id", "submit");
@@ -148,6 +159,7 @@ function allDone() {
 
   questionsDiv.appendChild(createSubmit);
 
+  // Score recap for when quiz is finished.
   createSubmit.addEventListener("click", function() {
     var initials = createInput.value;
 
