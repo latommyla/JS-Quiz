@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Heading -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/style.css" />
-    <title>Javascript Quiz</title>
+    <!-- Website Title -->
+    <title> Javascript Quiz </title>
   </head>
 
   <body>
-  <a id="highscores" href="quiz.html"> View Highscores! </a>  
+    <!-- Div element for timer countdown -->
   <div id="timer"></div> 
    <div id="wrapper">
+     <!-- Div element for questions -->
      <div id="questions">
       <h1> Javascript Coding Quiz </h1>
       <p> Ready to test your knowledge on Javascript? You will be timed, any wrong questions, you will lose 10 seconds! </p> 
+      <!-- Unordered list for allQuestions in script.js -->
       <ul id="optionsUl"></ul>
+      <!-- Start button to trigger the quiz questions -->
       <button id="startquiz"> Start Quiz! </button>
      </div>
     </div>
    </div>
 
+   <!-- Footer with link to view highscores -->
+   <footer>
+     <a id="highscores" href="quiz.html"> VIEW HIGHSCORES! </a>  
+   </footer>
+
+   <!-- Script element to link script.js -->
    <script type="text/javascript" src="./assets/script.js"></script>
 
   </body>
