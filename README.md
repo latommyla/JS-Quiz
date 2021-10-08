@@ -20,12 +20,12 @@ To install this project, simply download the zip file or clone the SSH key to yo
 
 - Once clicked, a timer should appear and each question you get wrong, you'll get penalized 10 seconds.
 
-<img src="./assets/images/main1.png" alt="quizbegins" title="quizbegins">
+<img src="./assets/images/main2.png" alt="quizbegins" title="quizbegins">
 
 - If the answer is correct or wrong, a message will appear below the options.
 
-<img src="./assets/images/main2.png" alt="correctorwrong" title="correctorwrong">
+<img src="./assets/images/main3.png" alt="correctorwrong" title="correctorwrong">
 
 - Once all 5 questions has been answered, you will be presented with a score and a place to input your name.
 
-<img src="./assets/images/main3.png" alt="finalscore" title="finalscore">
+<img src="./assets/images/main4.png" alt="finalscore" title="finalscore">
