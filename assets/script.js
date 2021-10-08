@@ -45,7 +45,7 @@ startQuiz.addEventListener("click", function() {
  if (holdTimer === 0) {
         holdTimer = setInterval(function () {
         countDown--;
-        startTimer.textContent = "Time: " + countDown;
+        startTimer.textContent = "Timer: " + countDown;
 
       if (countDown <=0) {
         clearInterval(holdTimer);
