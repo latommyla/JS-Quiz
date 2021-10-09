@@ -9,7 +9,13 @@ This project was for my UCSD bootcamp, and I must say, this was definitely one o
 
 ## Description 
 
-This project has HTML, CSS, and JS involved. Developing a quiz application based on Javascript and applying what we learned in the past weeks. 
+Developing a quiz application based on Javascript and applying what we learned in the past weeks.
+
+## What was used in this project?
+
+- HTML
+- CSS
+- JQuery
 
 ## Installation
 
@@ -36,3 +42,9 @@ To install this project, simply download the zip file or clone the SSH key to yo
 - After your name has been inputed and submitted, you will be present with your current and previous scores. Can reset all the scores, or go back to the main page (index.html).
 
 <img src="./assets/images/main5.png" alt="finalscores" title="finalscores">
+
+## Contact 
+
+- [My Gmail](mailto:tommyl.dmd@gmail.com)
+- [GitHub](https://github.com/latommyla)
+- [Instagram](https://www.instagram.com/latommyla/)
